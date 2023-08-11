@@ -1,6 +1,150 @@
+@import "_variables";
+@import "reset";
+
 body {
-  background: peru;
-  a {
-    color: blue;
+  height: 100vh;
+  background-color: $red;
+  
+}
+
+.leftDiv {
+  width: 33%;
+  height: 100%;
+  background-color: $beige;
+  display: flex;
+  flex-direction: column;
+  font-family: RingsideExtraWide-Book,Blank,Helvetica Neue,Helvetica,sans-serif;
+  letter-spacing: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  h1 {
+    color: $red;
+    font-size: 60px;
+    width: 50%;
+    margin-top: 80px;
+    margin-left: $margin1;
   }
+
+  h4 {
+    color: $red;
+    margin-left: $margin1;
+    margin-top: 10%;
+    font-size: 25px;
+  }
+
+  .firstP {
+    color: $red;
+    margin-left: $margin1;
+    margin-top: 5%;
+    width: 70%;
+    text-align: justify;
+  }
+
+  nav {
+    ul{
+      margin-left: $margin1;
+      margin-top: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 70%;
+      li {
+        font-size: 15px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        opacity: 0.7;
+        &:hover {
+          opacity: 1;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+
+  .secondP {
+    margin-left: $margin1;
+    margin-top: 5%;
+    width: 70%;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+}
+
+main {
+  font-family: RingsideCompressed-Bold,Blank,Helvetica Neue,Helvetica,sans-serif;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 67%;
+  margin-left: 33%;
+  
+  header {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    .wrapper {
+    font-size: 18px;
+    color: $white;
+    a {
+      text-decoration: none;
+      border-bottom: 2px solid $blackred;
+      color: $blackred;
+      &:hover {
+        color: $white;
+        border-bottom: 2px solid $white;
+      }
+    }
+    }
+  }
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.1) 1%,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      )
+      $red;
+
+    .title {
+      display: flex;
+      width: 773px;
+      gap: 110px;
+      margin-top: 80px;
+
+      h1 {
+        color: $white;
+        font-size: 50px;
+        font-weight: 600;
+      }
+
+      h4 {
+          color: $white;
+          padding-top: 40px;
+      }
+    }
+
+  .img {
+      display: flex;
+      justify-content: center;
+      margin-top: 3%;
+      img {
+        width: 773px;
+        height: 435px;
+        box-shadow: 0 80px 80px -80px #2d0806;
+      }
+    }
+  }
+  
 }
